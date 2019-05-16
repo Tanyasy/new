@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>首页</h1>
+<hr>
+{{ my_str }}
+<br>
+{{ my_int }}
+<br>
+{{ my_list }}
+<br>
+{{ my_dict }}
+<br>
+{{ my_list.0}}
+<hr>
+{% for item in my_list %}
+    <li>{{ loop.index }} {{ item }}</li>
+
+{% endfor %}
+
+{#if判断语法使用#}
+
+{% if my_int >= 18 %}
+    成年了
+{% elif my_int < 18 and my_int > 10 %}
+    小青年
+{% else %}
+    小屁孩
+{% endif %}
+
+{{ my_str }}
+<hr>
+{{ my_str | length }}
+<hr>
+{{ 'my_str' | upper }}
+<br>
+{{ my_str | title }}
+<hr>
+{{ "ITCAST" | lower }}
+<hr>
+{{ html_str }}
+<br>
+{# safe 过滤器： 认为html是安全的解析后输出 #}
+{{ html_str | safe }}
+<br>
+
+{#{{ aa | default:"默认值" }}#}
+<br>
+{{ my_date }}
+<br>
+{#{{ my_date | date:"Y-m-d" }}#}
+<hr>
+{{ my_list }}
+<hr>
+{{ my_list | do_reverse }}
+
+</body>
+</html>

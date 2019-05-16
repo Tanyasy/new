@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titleBlock %}
+        父模板
+    {% endblock %}</title>
+</head>
+<body>
+<h1>我是top栏</h1>
+<hr>
+{#2.在父模板中将需要重写的内容使用block包含#}
+{% block contentBlock %}
+
+<h1>我是父模板中的内容</h1>
+
+{% endblock %}
+
+<hr>
+<h1>我是bottom栏</h1>
+</body>
+</html>
